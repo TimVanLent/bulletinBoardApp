@@ -1,0 +1,15 @@
+html
+	head
+	body
+		h1 write a message
+		form(action= '/' method='post')
+			label message
+			br
+			input(name='titel')
+			br
+			textarea(type ='text', rows="5", name="bodie")
+			br
+			input(type='submit', value='submit')
+		
+		br
+		a(href='/messages') read a message

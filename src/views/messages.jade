@@ -1,0 +1,12 @@
+html
+	head
+	body
+		h2 message board
+
+		each message in messages
+			ul(id=message.id)= 'message #' + message.id	
+				li(id=message.title)= 'title: ' +message.title
+				li(id=message.body)= 'message: ' +message.body
+				br
+		a(href='/') write a message
+		
