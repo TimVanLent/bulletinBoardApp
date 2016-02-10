@@ -3,13 +3,20 @@ html
 	body
 		h1 write a message
 		form(action= '/' method='post')
-			label message
+
 			br
-			input(name='titel')
+
+			input#tit(placeholder="title", name='titel', style="width: 142px;")
+			
 			br
-			textarea(type ='text', rows="5", name="bodie")
+		
+			textarea#nibbit(type="text", placeholder="body", rows="5", name="bodie")
 			br
 			input(type='submit', value='submit')
 		
 		br
 		a(href='/messages') read a message
+
+
+			
+
