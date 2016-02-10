@@ -4,6 +4,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var http = require('http');
 var pg = require('pg');
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + '@localhost/classexample';
+console.log(connectionString);
 
 app.set('views', './src/views');
 app.set('view engine', 'jade');
@@ -17,9 +19,7 @@ app.post('/', bodyParser.urlencoded({
 			extended: true
 		}),
 		function(req, res) {
-
 			
-			var connectionString = "postgres://timvanlent@localhost/classexample";
 			pg.connect(connectionString, function(err, client, done) {
 				if (err) {
 					if (client) {
@@ -52,7 +52,6 @@ app.post('/', bodyParser.urlencoded({
 			
 
 			app.get('/messages', function (req,res){
-			var connectionString = "postgres://timvanlent@localhost/classexample";
 			pg.connect(connectionString, function(err, client, done) {
 				if (err) {
 					if (client) {
