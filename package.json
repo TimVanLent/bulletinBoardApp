@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TimVanLent/bulletinBoardApp/issues"
   },
-  "homepage": "https://github.com/TimVanLent/bulletinBoardApp#readme"
+  "homepage": "https://github.com/TimVanLent/bulletinBoardApp#readme",
+  "dependencies": {
+    "sequelize": "^3.19.2"
+  }
 }
